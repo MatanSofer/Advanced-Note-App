@@ -7,7 +7,6 @@ import com.example.advancednoteapplicaion.feature_note.domain.repository.NoteRep
 class AddNoteUseCase(
     private val repository: NoteRepository
 ) {
-
     @Throws(InvalidNoteException::class)
     suspend operator fun invoke(note: Note){
         if (note.title.isBlank()){
